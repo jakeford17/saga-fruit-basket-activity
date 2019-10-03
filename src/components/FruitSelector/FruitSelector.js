@@ -36,10 +36,10 @@ class FruitSelector extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.addFruit('Apple')}>Add Apple</button>
-                <button onClick={this.addFruit('Orange')}>Add Orange</button>
-                <button onClick={this.addFruit('Watermelon')}>Add Watermelon</button>
-                <button onClick={this.addFruit('Grapefruit')}>Add Grapefruit</button>
+                <button onClick={this.addFruit('Apple')}>ADD <span role="img" aria-label="apple">&#127822;</span></button>
+                <button onClick={this.addFruit('Orange')}>ADD <span role="img" aria-label="orange">&#x1F34A;</span></button>
+                <button onClick={this.addFruit('Watermelon')}>ADD <span role="img" aria-label="watermelon">&#127817;</span></button>
+                <button onClick={this.addFruit('Grapes')}>ADD <span role="img" aria-label="grapes">&#127815;</span></button>
             </div>
         )
     }

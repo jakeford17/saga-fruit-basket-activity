@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const idGenerator = require('../modules/id.generator')();
-const basket = [{fruit: 'Grapefruit', id: idGenerator.next().value}, 
+const basket = [{fruit: 'Grapes', id: idGenerator.next().value}, 
                 {fruit: 'Watermelon', id: idGenerator.next().value}];
 
 // Add a new fruit to the basket

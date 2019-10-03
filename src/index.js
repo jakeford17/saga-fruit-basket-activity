@@ -16,6 +16,7 @@ import axios from 'axios';
 function* rootSaga() {
     yield takeEvery('FETCH_FRUITS', fetchFruits);
     yield takeEvery('POST_FRUITS', postFruits);
+    yield takeEvery('DELETE_FRUITS', deleteFruits);
 }
 
 function* fetchFruits() {
@@ -35,6 +36,15 @@ function* postFruits(action) {
             data: action.payload
         });
         yield put({type: 'GET_FRUITS'}) 
+    } catch (error) {
+        console.log('error while fetching elements', error)
+    }
+}
+
+function* deleteFruits(action) {
+    try {
+        yield axios.delete(`/fruit/${action.payload}`);
+        yield put({type: 'GET_FRUITS'});
     } catch (error) {
         console.log('error while fetching elements', error)
     }
